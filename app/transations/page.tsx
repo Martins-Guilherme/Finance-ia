@@ -1,4 +1,4 @@
-const transition = () => {
+const TransitionsPage = () => {
   return (
     <>
       <h1>Transations page</h1>
@@ -6,4 +6,4 @@ const transition = () => {
   );
 };
 
-export default transition;
+export default TransitionsPage;

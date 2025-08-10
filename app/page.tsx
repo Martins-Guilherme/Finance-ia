@@ -1,7 +1,9 @@
+import { Button } from "./_components/ui/button";
+
 export default function Home() {
   return (
     <>
-      <h1 className="flex text-red-500">Olá Mundo</h1>
+      <Button variant="destructive" size="default"  >Olá Mundo</Button>
     </>
   );
 }

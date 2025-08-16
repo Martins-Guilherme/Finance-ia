@@ -45,14 +45,20 @@ import {
   TRANSACTION_TYPE_OPTIONS,
 } from "../_constants/transactions";
 import { DatePickerDemo } from "./ui/date-picke";
+import { addTransaction } from "../_actions/add-transactions";
+import { useState } from "react";
 
 const formSchema = z.object({
   name: z.string().trim().min(1, {
     message: "O nome é obrigatório.",
   }),
-  amount: z.string().trim().min(1, {
-    message: "O valor é obrigatório.",
-  }),
+  amount: z
+    .number({
+      error: "O valor é obrigatório.",
+    })
+    .positive({
+      error: "O valor deve ser posotivo.",
+    }),
   type: z.enum(TransactionType, {
     error: "O tipo é obrigatório.",
   }),
@@ -70,11 +76,12 @@ const formSchema = z.object({
 type FormSchema = z.infer<typeof formSchema>;
 
 const AddTransactionsButton = () => {
+  const [dialogIsOpen, setDialogIsOpen] = useState(false);
   const form = useForm<FormSchema>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
-      amount: "",
+      amount: 50,
       type: TransactionType.EXPENSE, // Default to EXPENSE
       category: TransactionCategory.OTHER, // Default to OTHER
       paymentMethod: PaymentMethod.CASH, // Default to CASH
@@ -82,14 +89,23 @@ const AddTransactionsButton = () => {
     },
   });
 
-  const onSubmit = (data: FormSchema) => {
-    console.log(data);
+  const onSubmit = async (data: FormSchema) => {
+    try {
+      await addTransaction(data);
+      setDialogIsOpen(false);
+      form.reset();
+    } catch (error) {
+      console.error("Error adding transaction:", error);
+      return;
+    }
   };
 
   return (
     <>
       <Dialog
+        open={dialogIsOpen}
         onOpenChange={(open) => {
+          setDialogIsOpen(open);
           if (!open) {
             form.reset();
           }
@@ -128,7 +144,15 @@ const AddTransactionsButton = () => {
                   <FormItem>
                     <FormLabel>Valor</FormLabel>
                     <FormControl>
-                      <MoneyInput placeholder="Digite o valor..." {...field} />
+                      <MoneyInput
+                        placeholder="Digite o valor..."
+                        value={field.value}
+                        onValueChange={({ floatValue }) => {
+                          field.onChange(floatValue);
+                        }}
+                        onBlur={field.onBlur}
+                        disabled={field.disabled}
+                      />
                     </FormControl>
                     <FormMessage />
                   </FormItem>

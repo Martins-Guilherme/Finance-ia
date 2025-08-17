@@ -34,7 +34,7 @@ Esta aplicação foi desenvolvida com as seguintes tecnologias:
       * **Express:** Framework para a construção da API.
       * **Prisma:** ORM para interação com o banco de dados.
   * **Banco de Dados:**
-      * **PostgreSQL:** Banco de dados relacional robusto para armazenar as informações do usuário e suas transações.
+      * **Neon DB:** Banco de dados PostgreSQL serverless e escalável na nuvem para armazenar as informações do usuário e suas transações.
   * **IA:**
      * **?**
 

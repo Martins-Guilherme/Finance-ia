@@ -1,36 +1,45 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Finance IA
 
-## Getting Started
+### This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<img width="1344" height="800" alt="image" src="https://github.com/user-attachments/assets/d4ce85fb-6991-49ff-9e13-f34039bc90ed" />
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+-----
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# Documentação do Finance AI
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Visão Geral
 
-## Learn More
+O **Finance AI** é uma plataforma de gestão financeira inteligente que utiliza **inteligência artificial (IA)** para monitorar suas movimentações e fornecer insights personalizados. Nosso objetivo é simplificar o controle do seu orçamento, ajudando você a tomar decisões financeiras mais informadas.
 
-To learn more about Next.js, take a look at the following resources:
+## Funcionalidades Principais
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  * **Dashboard Intuitivo:** Visualize suas finanças de forma clara e objetiva com um painel de controle que mostra o seu saldo total, receitas e despesas.
+  * **Monitoramento de Movimentações:** A IA analisa seus gastos e receitas em tempo real, identificando padrões e comportamentos financeiros.
+  * **Insights Personalizados:** Receba dicas e alertas inteligentes sobre como otimizar seu orçamento, economizar dinheiro e atingir suas metas financeiras.
+  * **Organização Simplificada:** Categorize suas transações automaticamente ou de forma manual para ter uma visão detalhada de onde seu dinheiro está indo.
+  * **Controle de Orçamento:** Defina limites de gastos para diferentes categorias e acompanhe seu progresso para se manter dentro do planejado.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Tecnologias Utilizadas
 
-## Deploy on Vercel
+Esta aplicação foi desenvolvida com as seguintes tecnologias:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+  * **Frontend:**
+      * **React:** Para a construção da interface do usuário.
+      * **Chart.js:** Para a visualização dos dados em gráficos.
+      * **Tailwind CSS:** Para a estilização e design responsivo.
+  * **Backend:**
+      * **Node.js:** Ambiente de execução do servidor.
+      * **Express:** Framework para a construção da API.
+      * **Prisma:** ORM para interação com o banco de dados.
+  * **Banco de Dados:**
+      * **PostgreSQL:** Banco de dados relacional robusto para armazenar as informações do usuário e suas transações.
+  * **IA:**
+     * **?**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contribuição
+
+Contribuições são bem-vindas\! Se você deseja ajudar a melhorar o Finance AI, sinta-se à vontade para abrir uma *issue* ou enviar um *pull request*.
+
+-----

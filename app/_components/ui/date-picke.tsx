@@ -16,7 +16,7 @@ interface DatePickerProps {
 
 export function DatePickerDemo({ value, onChange }: DatePickerProps) {
   return (
-    <Popover>
+    <Popover modal={true}>
       <PopoverTrigger asChild>
         <Button
           variant="outline"

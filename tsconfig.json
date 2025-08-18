@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/(home)/_components/time-select.tsx", "app/(home)/_components/summary-card.tsx", "app/(home)/_components/summary-cards.tsx"],
   "exclude": ["node_modules"]
 }

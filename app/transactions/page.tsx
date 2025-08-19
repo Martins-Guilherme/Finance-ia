@@ -3,7 +3,7 @@ import AddTransactionButton from "../_components/add-transactions-button";
 import Navbar from "../_components/navbar";
 import { DataTable } from "../_components/ui/data-table";
 import { db } from "../_lib/prisma";
-import { transactionsColumns } from "./_columns";
+import { transactionColumns } from "./_columns";
 import { redirect } from "next/navigation";
 
 const TransitionsPage = async () => {
@@ -27,7 +27,7 @@ const TransitionsPage = async () => {
           <AddTransactionButton />
         </div>
         {/* TABELA COM OS DADOS */}
-        <DataTable columns={transactionsColumns} data={transactions} />
+        <DataTable columns={transactionColumns} data={transactions} />
       </div>
     </>
   );

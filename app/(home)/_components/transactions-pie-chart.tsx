@@ -14,7 +14,7 @@ import {
 import { Card, CardContent } from "@/app/_components/ui/card";
 
 import { TransactionType } from "@prisma/client";
-import { TransactionPercentagePerType } from "@/app/_data/get-dashboard/type";
+import { TransactionPercentagePerType } from "@/app/_data/get-dashboard/types";
 import PercentageItem from "./percentage-item";
 
 const chartConfig = {
@@ -61,6 +61,11 @@ const TransactionsPieChart = ({
       amount: expensesTotal,
       fill: "#E93030",
     },
+    {
+      type: TransactionType.INVESTMENT,
+      amount: investmentsTotal,
+      fill: "#FFFFFF",
+    },
   ];
   return (
     <Card className="flex flex-col p-12">
@@ -84,17 +89,17 @@ const TransactionsPieChart = ({
         </ChartContainer>
         <div className="space-y-2">
           <PercentageItem
-            icon={<TrendingUpIcon size={14} className="text-[#55B02E]" />}
+            icon={<TrendingUpIcon size={14} className="text-primary" />}
             title="Receita"
             value={typesPercentage[TransactionType.DEPOSIT]}
           />
           <PercentageItem
-            icon={<TrendingDownIcon size={14} className="text-[#E93030]" />}
+            icon={<TrendingDownIcon size={14} className="text-red-500" />}
             title="Despesas"
             value={typesPercentage[TransactionType.EXPENSE]}
           />
           <PercentageItem
-            icon={<PiggyBankIcon size={14} className="text-[#FFFFFF]" />}
+            icon={<PiggyBankIcon size={14} />}
             title="Investimentos"
             value={typesPercentage[TransactionType.INVESTMENT]}
           />

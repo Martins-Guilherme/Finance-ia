@@ -15,7 +15,9 @@ const PercentageItem = ({ icon, value, title }: PercentageItemProps) => {
           {icon}
           <p className="text-sm text-muted-foreground">{title}</p>
         </div>
-        {/* Valor */}
+        {/* DESCRIÇÃO */}
+        <p className="text-sm text-muted-foreground">{title}</p>
+        {/* VALOR */}
         <p className="font-sm font-bold">{value}%</p>
       </div>
     </>
